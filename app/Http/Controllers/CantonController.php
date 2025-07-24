@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Canton;
 use Illuminate\Http\Request;
 
-class placeController extends Controller
+class CantonController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $projects = Canton::get();
+        return response()->json($projects);
     }
 
     /**
@@ -27,7 +29,8 @@ class placeController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $project = Canton::find($id);
+        return response()->json($project);
     }
 
     /**

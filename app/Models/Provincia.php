@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Provincia extends Model
 {
 
-    protected $table = 'provincas';
+    protected $table = 'provincias';
 
     public function cantones():BelongsToMany
     {
